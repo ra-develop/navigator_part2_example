@@ -59,6 +59,14 @@ class SplashPage extends StatelessWidget {
                   ModalRoute.withName('/'),
                 ),
               ),
+              const SizedBox(height: 24),
+              ButtonWidget(
+                text: 'Push: Map',
+                onClicked: () => Navigator.pushNamed(
+                  context,
+                  AppRoutes.map,
+                ),
+              ),
             ],
           ),
         ),

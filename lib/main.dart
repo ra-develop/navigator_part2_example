@@ -5,6 +5,7 @@ import 'package:navigator_part2_example/page/home/home_arguments.dart';
 import 'package:navigator_part2_example/page/home/home_page.dart';
 import 'package:navigator_part2_example/page/login/login_arguments.dart';
 import 'package:navigator_part2_example/page/login/login_page.dart';
+import 'package:navigator_part2_example/page/map/map_page.dart';
 import 'package:navigator_part2_example/page/splash/splash_page.dart';
 
 void main() {
@@ -43,6 +44,8 @@ class MyApp extends StatelessWidget {
         return args == null
             ? throw Exception('Error: No Login Arguments')
             : buildRoute(LoginPage(arguments: args), settings: settings);
+      case AppRoutes.map:
+        return buildRoute(MapPage(), settings: settings);
       case AppRoutes.home:
         // Arguments are not mandatory => we set some default arguments
         final defaultArgs = HomeArguments(userToken: null);
